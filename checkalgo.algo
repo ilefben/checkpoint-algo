@@ -1,0 +1,58 @@
+ALGORITHM sentence
+VAR
+str : STRING :="";
+c : CHAR;
+i : INTEGER:=0;
+sum,voy,len : integer;
+BEGIN
+while(str(length)<>'.'){
+  READ(str)
+}
+sum:=0;
+len=0;
+FOR i FROM 0 TO str(len) STEP step  DO
+  len:=len+i;
+  IF(str(i)==" ")THEN
+    sum:=sum+1;
+  i++;
+IF((str(i)="i")OR(str(i)="I")OR(str(i)="o")OR(str(i)="O")OR(str(i)="a")OR(str(i)="A")OR(str(i)="e")OR(str(i)="E")OR(str(i)="u")OR(str(i)="U")OR(str(i)="y")OR(str(i)="Y"))THEN
+  voy:=voy+1;
+
+END_FOR
+  WRITE(sum,len,voy)
+END
+
+
+
+
+
+/*ALGORITHM algorith_checkpoint
+VAR
+    c : CHAR := '';
+    // let n be the number of caracters in the sentence
+     n: INTEGER:=0;
+     // let i be the number of words in the sentence
+     i:INTEGER:=0;
+     // let v be the number of vowels in the sentence
+     v:INTEGER:=0;
+
+BEGIN
+
+      WHILE (c <> '.') DO
+        Read (c);
+        n:=n+1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+                v:=v+1;
+        END_IF
+        IF (c=' ') THEN
+            i:=i+1;
+        END_IF
+      END_WHILE
+          i:=i+1;
+
+    Write("The length of the sentence is ",n);
+    Write("The number of words in the sentence is ",i);
+    Write("he number of vowels in the sentence. is ",v);
+
+
+END

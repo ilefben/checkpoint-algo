@@ -1,0 +1,55 @@
+ALGORITHM dotproduct
+VAR
+    v1:ARRAY_OF FLOAT[3];
+    v2:ARRAY_OF FLOAT[3];
+    ps,i:INTEGER;
+BEGIN
+  
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        read(v1[i]);
+    END_FOR
+    FOR i FROM 0 TO v2.length-1 STEP 1  DO
+        read(v2[i]);
+    END_FOR
+        ps=ps+v1[i]*v2[i];
+        IF (ps==0) THEN
+           write("les deux vecteurs sont orthogonaux")
+        ELSE
+            write("les deux vecteurs ne sont pas orthogonaux")
+        END_IF
+    END
+
+
+
+PROCEDURE dot_product(v1: ARRAY_OF FLOAT[3],v2: ARRAY_OF FLOAT[3],ps:INTEGER)
+VAR i:INTEGER;
+BEGIN
+  
+    FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        read(v1[i]);
+    END_FOR
+    FOR i FROM 0 TO v2.length-1 STEP 1  DO
+        read(v2[i]);
+    END_FOR
+        ps=ps+v1[i]*v2[i];
+        IF (ps==0) THEN
+           write("les deux vecteurs sont orthogonaux")
+        ELSE
+            write("les deux vecteurs ne sont pas orthogonaux")
+        END_IF
+    END
+FUNCTION dot_product(ps:INTEGER) : INTEGER
+VAR
+    v1:ARRAY_OF FLOAT[3];
+    v2:ARRAY_OF FLOAT[3];
+    i:INTEGER;
+BEGIN
+     FOR i FROM 0 TO v1.length-1 STEP 1  DO
+        read(v1[i]);
+    END_FOR
+    FOR i FROM 0 TO v2.length-1 STEP 1  DO
+        read(v2[i]);
+    END_FOR
+        ps=ps+v1[i]*v2[i];
+    RETURN ps ;
+END
